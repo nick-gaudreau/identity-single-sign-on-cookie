@@ -81,7 +81,7 @@ namespace API.SingleSignOnCookie.Controllers
             return Ok();
         }
 
-        [HttpGet("unauthorized")]
+        [HttpPost("unauthorized")]
         public IActionResult FailedAuthorization()
         {
             return Unauthorized();
