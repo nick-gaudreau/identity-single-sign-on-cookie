@@ -71,14 +71,21 @@ namespace API.SingleSignOnCookie.Controllers
             return Ok("Success!");
         }
 
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            // Clear the existing external cookie
+            await HttpContext.SignOutAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme);
 
+            return Ok();
+        }
 
         [HttpGet("unauthorized")]
         public IActionResult FailedAuthorization()
         {
             return Unauthorized();
         }
-
 
         private User MockAuthenticateUser(LoginDto loginDto)
         {
