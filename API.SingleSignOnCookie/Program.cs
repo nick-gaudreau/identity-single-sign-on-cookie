@@ -24,6 +24,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
        options.ExpireTimeSpan = TimeSpan.FromHours(24);
        options.SlidingExpiration = true;
        options.AccessDeniedPath = "/Auth/unauthorized";
+       options.Cookie.Domain = ".subdomain.local"; // TODO: form app settings
    });
 
 var app = builder.Build();
