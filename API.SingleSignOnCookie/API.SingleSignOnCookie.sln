@@ -5,7 +5,12 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.SingleSignOnCookie", "API.SingleSignOnCookie.csproj", "{CEBCCCAF-6C4F-4A36-9BBE-2D9928F1721B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Demo", "..\API.Demo\API.Demo.csproj", "{EF7740E6-276D-4852-81C5-D0A06BD68D13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Demo", "..\API.Demo\API.Demo.csproj", "{EF7740E6-276D-4852-81C5-D0A06BD68D13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F9D5D8F-3F9C-4BBB-8336-2B535EB50251}"
+	ProjectSection(SolutionItems) = preProject
+		Caddyfile.txt = Caddyfile.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

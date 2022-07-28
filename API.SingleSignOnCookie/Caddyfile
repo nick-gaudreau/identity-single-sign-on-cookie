@@ -1,0 +1,7 @@
+identityapi.subdomain.local {
+	reverse_proxy localhost:7282
+}
+
+demoapi.subdomain.local {
+	reverse_proxy localhost:7171
+}
