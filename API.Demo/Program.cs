@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.DataProtection;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Logging.SetMinimumLevel(LogLevel.Debug);
 
 // Add services to the container.
 
