@@ -1,2 +1,2 @@
-# api-single-sign-on-cookie
+# Identity API with SSO cookie for sub domain app
 Single Sign On using Cookies for same domain or sub domains applications
