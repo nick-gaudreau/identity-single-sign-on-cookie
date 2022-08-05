@@ -32,6 +32,7 @@ namespace API.Demo.Controllers
             .ToArray();
         }
 
+        [AllowAnonymous]
         [HttpPost("unauthorized")]
         public IActionResult FailedAuthorization()
         {
