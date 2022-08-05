@@ -1,0 +1,43 @@
+﻿ASP.NET Core Single Sign On using Cookies
+https://www.youtube.com/watch?v=o6lFWj6ExJs
+
+Microsoft - Use cookie authentication without ASP.NET Core Identity
+https://docs.microsoft.com/en-us/aspnet/core/security/authentication/cookie?view=aspnetcore-6.0
+
+
+TODO:
+add to Identity Api a logout
+
+Then
+Add another Web API project... API.Demo
+that one will have the protected routes
+
+Then
+Create a simple react project
+if I try to reach API.Demo protected route => will get 401
+Then try calling Identity API login route
+Try again protected ---> Fail
+
+Why => need Data Protection for shared cookie key
+
+Use Redis to store shared cookie key
+Redis on docker
+Microsoft.AspNetCore.DataProtection.StackExchangeRedis
+
+Start REDIS
+docker run --name sso-redis -p 5003:6379 -d redis
+When we retest the protected route from the APi.Demo, after logging into the identity APi /login
+it works, and we can see a shared key in Redis, via the cli
+
+
+@@ Next use on sub domains
+Identity: http://identityapi.subdomain.local/swagger/index.html
+http://identityapi.subdomain.local/auth/login
+
+
+
+Instead of below.. just use subdomain for both api
+
+// Nope for now
+Then calling again Api.Demo protected route should work (if allows sub-domain => config)
+with both API.DEMO and F-E on same sub domains.... /login to identity API will have the set-cookie response
